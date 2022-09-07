@@ -1,8 +1,10 @@
-# Сборка проекта на Gulp 4, Версия 3
+# Web-template
 
 ## Описание проекта:
 
-С помощью этих файлов вы сможете быстро настроить сборку вашего проекта на Gulp.
+Данный шаблон предназначен для автоматизации разработки и сборки web приложений
+
+***
 
 ## Модули:
 
@@ -20,25 +22,48 @@
     "gulp-stylus": Компиляция Stylus файлов
     "gulp-uglify": Сжатие и оптимизация Java Script кода
 
+***
+
 ## Структура файлов и папок:
 
-> ./src
->
-> >     /css
-> >
-> > >     	/*.scss *.sass *.less *.styl *.css
-> > >     	/*.scss *.sass *.less *.styl *.css
-> > >
-> > > /img
-> >
-> >     /js
-> >
-> > >     	/lib.js
-> > >     	/main.js
-> > >
-> > > ./gulpfile.js  
-> > > ./package.json  
-> > > ./index.html
+```
+.
+|-- gulp
+|   |-- config
+|   |   |-- *.js
+|   |-- tasks
+|   |   |-- *.js
+|-- src
+|   |-- fonts
+|   |   |-- **/*.{ttf|otf|webb|webb2}
+|   |-- html
+|   |   |-- includes
+|   |   |   |-- **/*.html
+|   |   |-- index.html
+|   |-- img
+|   |   |-- **/*.{jpg|jpeg|gif|tiff|png|svg}
+|   |-- js
+|   |   |-- includes
+|   |   |   |-- **/*.js
+|   |   |-- main.js
+|   |-- pug
+|   |   |-- includes
+|   |   |   |-- **/*.pug
+|   |   |-- index.pug
+|   |-- scss
+|   |   |-- includes
+|   |   |   |-- _*.scss
+|   |   |-- _main.scss
+|   |   |-- _mixins.scss
+|   |   |-- style.scss
+|-- .gitignore
+|-- .prettierignore
+|-- package.json
+|-- README.md
+
+```
+
+***
 
 ## Инструкция:
 
@@ -47,6 +72,6 @@
 3. Выполнить команду: gulp (запуск таска default, который очистит каталог build и запустит таск scripts, styles и img-compress, а так же watch - отслеживает изменения в файлах html, css, sass, scss, less, styl, js и в каталоге img)
 4. Писать свой код и наслаждаться автоматической сборкой проекта.
 
----
+***
 
-[![GitHub](https://img.shields.io/badge/-Мой_GitHub-333?style=for-the-badge&logo=GitHub&logoColor=fff)](https://github.com/morphIsmail)
+[![GitHub](https://img.shields.io/badge/-Мой_GitHub-333?style=for-the-badge&logo=GitHub&logoColor=fff)](https://github.com/ovanse)

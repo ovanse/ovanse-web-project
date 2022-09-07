@@ -1,0 +1,21 @@
+{
+    "name": "web-project",
+    "version": "0.0.1",
+    "description": "Template for web project",
+    "main": "gulpfile.js",
+    "type": "module",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ovanse/web-project.git"
+    },
+    "author": "Andrei Ovchinnikov",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ovanse/web-project/issues"
+    },
+    "homepage": "https://github.com/ovanse/web-project#readme",
+    "devDependencies": {
+        "gulp": "^4.0.2"
+    }
+}
