@@ -1,6 +1,4 @@
 import fileInclude from 'gulp-file-include';
-import webpHtmlNosvg from 'gulp-webp-html-nosvg';
-import versionNumber from 'gulp-version-number';
 import htmlmin from 'gulp-htmlmin';
 
 export const html = () => {
@@ -16,23 +14,21 @@ export const html = () => {
     )
     .pipe(fileInclude())
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
-    .pipe(webpHtmlNosvg())
-    .pipe(app.plugins.gulpif(app.config.isProd, app.plugins.size({ title: 'До сжатия' })))
-    .pipe(app.plugins.gulpif(app.config.isProd, htmlmin(app.config.htmlmin)))
-    .pipe(app.plugins.gulpif(app.config.isProd, app.plugins.size({ title: 'После сжатия' })))
+    .pipe(app.plugins.webpHtmlNoSvg())
     .pipe(
-      versionNumber({
-        value: '%DT%',
-        append: {
-          key: '_v',
-          cover: 0,
-          to: ['css', 'js'],
-        },
-        output: {
-          file: 'gulp/version.json',
-        },
-      })
+      app.plugins.gulpIf(
+        app.config.isProd,
+        app.plugins.size({ title: 'До сжатия' })
+      )
     )
+    .pipe(app.plugins.gulpIf(app.config.isProd, htmlmin(app.config.htmlmin)))
+    .pipe(
+      app.plugins.gulpIf(
+        app.config.isProd,
+        app.plugins.size({ title: 'После сжатия' })
+      )
+    )
+    .pipe(app.plugins.versionNumber(app.config.versionNumber))
     .pipe(app.gulp.dest(app.path.build.html))
-    .pipe(app.plugins.browsersync.stream());
+    .pipe(app.plugins.browserSync.stream());
 };

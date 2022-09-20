@@ -1,16 +1,19 @@
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
+const usePUG = true; // Использовать PUG или HTML
 
 export const config = {
   isProd: isProd,
   isDev: isDev,
+  usePUG: usePUG,
 
   htmlmin: {
     collapseWhitespace: isProd,
   },
 
   pug: {
-    pretty: isDev,
+    pretty: isDev, // Сжатие HTML файла
+    verbose: isDev, // Показывать в терминале какой файл обработан
   },
 
   webpack: {
@@ -23,5 +26,16 @@ export const config = {
 
   fonter: {
     formats: ['ttf', 'woff', 'eot', 'svg'],
+  },
+  versionNumber: {
+    value: '%DT%',
+    append: {
+      key: '_v',
+      cover: 0,
+      to: ['css', 'js'],
+    },
+    output: {
+      file: 'gulp/version.json',
+    },
   },
 };

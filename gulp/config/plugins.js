@@ -1,18 +1,22 @@
 import replace from 'gulp-replace'; // Поиск и замена
 import plumber from 'gulp-plumber'; // Обработка ошибок
 import notify from 'gulp-notify'; // Сообщения (подсказки)
-import browsersync from 'browser-sync'; // Локальный сервер
+import browserSync from 'browser-sync'; // Локальный сервер
 import newer from 'gulp-newer'; // Проверяет обновился ли файл
 import size from 'gulp-size'; // Показывает размер файла|ов
-import gulpif from 'gulp-if'; // Позволяет использовать логические конструкции в gulp
+import gulpIf from 'gulp-if'; // Позволяет использовать логические конструкции в gulp
+import webpHtmlNoSvg from 'gulp-webp-html-nosvg';
+import versionNumber from 'gulp-version-number';
 
 // Экспортируем объект
 export const plugins = {
   replace: replace,
   plumber: plumber,
   notify: notify,
-  browsersync: browsersync,
+  browserSync: browserSync,
   newer: newer,
   size: size,
-  gulpif: gulpif,
+  gulpIf: gulpIf,
+  webpHtmlNoSvg: webpHtmlNoSvg,
+  versionNumber: versionNumber,
 };
