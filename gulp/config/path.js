@@ -1,3 +1,7 @@
+// Получаем имя папки проекта
+import * as nodePath from 'path';
+const rootFolder = nodePath.basename(nodePath.resolve());
+
 const buildFolder = './build';
 const srcForlder = './src';
 
@@ -20,7 +24,7 @@ export const path = {
     html: `${srcForlder}/html/*.html`,
     pug: `${srcForlder}/pug/*.pug`,
     scss: `${srcForlder}/scss/style.scss`,
-    js: `${srcForlder}/js/main.js`,
+    js: [`${srcForlder}/js/app.js`],
     images: `${srcForlder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcForlder}/img/**/*.svg`,
   },

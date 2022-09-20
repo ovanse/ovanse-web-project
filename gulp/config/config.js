@@ -19,7 +19,7 @@ export const config = {
   webpack: {
     mode: isProd ? 'production' : 'development', // минифицированный код
     output: {
-      filename: 'main.min.js',
+      filename: 'app.min.js',
     },
   },
 
