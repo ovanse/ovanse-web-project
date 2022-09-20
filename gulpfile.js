@@ -15,11 +15,12 @@ global.app = {
 };
 
 // Импорт задач
-import { copy } from './gulp/tasks/copy.js';
 import { clear } from './gulp/tasks/clear.js';
-import { server } from './gulp/tasks/server.js';
+import { copy } from './gulp/tasks/copy.js';
 import { html } from './gulp/tasks/html.js';
 import { pug } from './gulp/tasks/pug.js';
+import { scss } from './gulp/tasks/scss.js';
+import { server } from './gulp/tasks/server.js';
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -27,11 +28,12 @@ function watcher() {
   app.config.usePUG
     ? app.gulp.watch(app.path.watch.pug, pug)
     : app.gulp.watch(app.path.watch.html, html);
+  app.gulp.watch(app.path.watch.scss, scss);
 }
 
 const mainTasks = app.config.usePUG
-  ? app.gulp.parallel(copy, pug)
-  : app.gulp.parallel(copy, html);
+  ? app.gulp.parallel(copy, pug, scss)
+  : app.gulp.parallel(copy, html, scss);
 
 // Построение сценариев выполнения задач для билда
 const build = app.gulp.series(clear, mainTasks);

@@ -1,6 +1,6 @@
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
-const usePUG = true; // Использовать PUG или HTML
+const usePUG = false; // Использовать PUG или HTML
 
 export const config = {
   isProd: isProd,
@@ -37,5 +37,10 @@ export const config = {
     output: {
       file: 'gulp/version.json',
     },
+  },
+  autoPrefixer: {
+    grid: true,
+    overrideBrowserslist: ['last 3 versions'],
+    cascade: true,
   },
 };

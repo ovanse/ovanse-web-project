@@ -5,10 +5,10 @@ export const pug = () => {
     .src(app.path.src.pug)
     .pipe(
       app.plugins.plumber(
-        app.plugins.notify.onError({
+        app.plugins.notify.onError((error) => ({
           title: 'PUG',
-          message: 'Error: <%= error.message %>',
-        })
+          message: error.message,
+        }))
       )
     )
     .pipe(gulpPug(app.config.pug))
