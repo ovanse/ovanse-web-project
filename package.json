@@ -1,27 +1,30 @@
 {
-    "name": "web-project",
-    "version": "0.0.1",
-    "description": "Template for web project",
-    "main": "gulpfile.js",
-    "type": "module",
-    "scripts": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ovanse/web-project.git"
-    },
-    "author": "Andrei Ovchinnikov",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/ovanse/web-project/issues"
-    },
-    "homepage": "https://github.com/ovanse/web-project#readme",
-    "devDependencies": {
-        "browser-sync": "^2.27.10",
-        "del": "^7.0.0",
-        "gulp": "^4.0.2",
-        "gulp-newer": "^1.4.0",
-        "gulp-notify": "^4.0.0",
-        "gulp-plumber": "^1.2.1",
-        "gulp-replace": "^1.1.3"
-    }
+  "name": "web-project",
+  "version": "0.0.1",
+  "description": "Template for web project",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovanse/web-project.git"
+  },
+  "author": "Andrei Ovchinnikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovanse/web-project/issues"
+  },
+  "homepage": "https://github.com/ovanse/web-project#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-replace": "^1.1.3"
+  }
 }

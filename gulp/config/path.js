@@ -1,4 +1,4 @@
-const buildFolder = './dist';
+const buildFolder = './build';
 const srcForlder = './src';
 
 export const path = {
