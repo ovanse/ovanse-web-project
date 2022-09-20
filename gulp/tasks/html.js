@@ -18,14 +18,14 @@ export const html = () => {
     .pipe(
       app.plugins.gulpIf(
         app.config.isProd,
-        app.plugins.size({ title: 'До сжатия' })
+        app.plugins.size({ title: 'HTML: raw' })
       )
     )
     .pipe(app.plugins.gulpIf(app.config.isProd, htmlmin(app.config.htmlmin)))
     .pipe(
       app.plugins.gulpIf(
         app.config.isProd,
-        app.plugins.size({ title: 'После сжатия' })
+        app.plugins.size({ title: 'HTML: compressed' })
       )
     )
     .pipe(app.plugins.versionNumber(app.config.versionNumber))
