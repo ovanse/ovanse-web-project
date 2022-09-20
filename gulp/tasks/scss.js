@@ -42,6 +42,6 @@ export const scss = () => {
       })
     )
     .pipe(app.plugins.size({ title: 'CSS: compressed' }))
-    .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.css, { sourcemaps: app.config.isDev }))
     .pipe(app.plugins.browserSync.stream());
 };

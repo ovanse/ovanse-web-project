@@ -20,6 +20,7 @@ import { copy } from './gulp/tasks/copy.js';
 import { html } from './gulp/tasks/html.js';
 import { pug } from './gulp/tasks/pug.js';
 import { scss } from './gulp/tasks/scss.js';
+import { js } from './gulp/tasks/js.js';
 import { server } from './gulp/tasks/server.js';
 
 // Наблюдатель за изменениями в файлах
@@ -29,11 +30,12 @@ function watcher() {
     ? app.gulp.watch(app.path.watch.pug, pug)
     : app.gulp.watch(app.path.watch.html, html);
   app.gulp.watch(app.path.watch.scss, scss);
+  app.gulp.watch(app.path.watch.js, js);
 }
 
 const mainTasks = app.config.usePUG
-  ? app.gulp.parallel(copy, pug, scss)
-  : app.gulp.parallel(copy, html, scss);
+  ? app.gulp.parallel(copy, pug, scss, js)
+  : app.gulp.parallel(copy, html, scss, js);
 
 // Построение сценариев выполнения задач для билда
 const build = app.gulp.series(clear, mainTasks);
