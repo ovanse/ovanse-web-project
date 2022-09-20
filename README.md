@@ -30,6 +30,10 @@
 |   |-- tasks
 |   |   |-- *.js
 |-- src
+|   |-- download
+|   |   |-- *
+|   |-- files
+|   |   |-- *
 |   |-- fonts
 |   |   |-- **/*.{ttf|otf|webb|webb2}
 |   |-- html
