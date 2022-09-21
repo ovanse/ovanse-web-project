@@ -37,14 +37,12 @@ function watcher() {
   app.gulp.watch(app.path.watch.font, font);
 }
 
+// Фомируем список тасков для выполнения
 const markup = app.config.usePUG ? pug : html;
-
 const mainTasks = app.gulp.parallel(copy, markup, scss, js, img, font);
-
-// Построение сценариев выполнения задач для билда
+// Для Build
 const build = app.gulp.series(clear, mainTasks);
-
-// Построение сценариев выполнения задач для разработки
+// Для Dev
 const dev = app.gulp.series(build, app.gulp.parallel(watcher, server));
 
 // Выполнение сценария по умолчанию

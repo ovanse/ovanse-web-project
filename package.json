@@ -1,6 +1,6 @@
 {
   "name": "web-project",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Template for web project",
   "main": "gulpfile.js",
   "type": "module",
@@ -57,9 +57,5 @@
     "presets": [
       "@babel/preset-env"
     ]
-  },
-  "dependencies": {
-    "bootstrap": "^5.2.1",
-    "jquery": "^3.6.1"
   }
 }

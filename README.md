@@ -26,9 +26,12 @@
 .
 |-- gulp
 |   |-- config
-|   |   |-- *.js
+|   |   |-- config.js
+|   |   |-- path.js
+|   |   |-- plugins.js
 |   |-- tasks
 |   |   |-- *.js
+|   |-- version.json
 |-- src
 |   |-- download
 |   |   |-- *
@@ -40,26 +43,31 @@
 |   |   |-- includes
 |   |   |   |-- **/*.html
 |   |   |-- index.html
+|   |   |-- *.html
 |   |-- img
 |   |   |-- **/*.{jpg|jpeg|gif|tiff|png|svg}
 |   |-- js
 |   |   |-- includes
 |   |   |   |-- **/*.js
-|   |   |-- main.js
+|   |   |-- app.js
 |   |-- pug
 |   |   |-- includes
 |   |   |   |-- **/*.pug
+|   |   |-- *.pug
 |   |   |-- index.pug
 |   |-- scss
 |   |   |-- includes
+|   |   |   |-- _main.scss
+|   |   |   |-- _mixins.scss
 |   |   |   |-- _*.scss
-|   |   |-- _main.scss
-|   |   |-- _mixins.scss
 |   |   |-- style.scss
+|   |--file.txt
 |-- .gitignore
 |-- .prettierignore
+|-- gulpfile.js
 |-- package.json
 |-- README.md
+|-- tmp
 
 ```
 
@@ -70,7 +78,7 @@
 3. Если работа будет с препроцессором PUG, то в файле `gulp/config/config.js` переменной usePUG поставить значение true;
 4. Для запуска сборки в режиме разработки `npm run dev`
 5. Для построение сборки для релиза `npm run build`
-7. Писать свой код и наслаждаться автоматической сборкой проекта.
+6. Писать свой код и наслаждаться автоматической сборкой проекта.
 
 ***
 
