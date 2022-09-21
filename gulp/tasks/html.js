@@ -13,21 +13,10 @@ export const html = () => {
       )
     )
     .pipe(fileInclude())
-    .pipe(app.plugins.replace(/@img\//g, 'img/'))
     .pipe(app.plugins.webpHtmlNoSvg())
-    .pipe(
-      app.plugins.gulpIf(
-        app.config.isProd,
-        app.plugins.size({ title: 'HTML: raw' })
-      )
-    )
+    .pipe(app.plugins.gulpIf(app.config.isProd, app.plugins.size({ title: 'HTML: raw' })))
     .pipe(app.plugins.gulpIf(app.config.isProd, htmlmin(app.config.htmlmin)))
-    .pipe(
-      app.plugins.gulpIf(
-        app.config.isProd,
-        app.plugins.size({ title: 'HTML: compressed' })
-      )
-    )
+    .pipe(app.plugins.gulpIf(app.config.isProd, app.plugins.size({ title: 'HTML: compressed' })))
     .pipe(app.plugins.versionNumber(app.config.versionNumber))
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browserSync.stream());

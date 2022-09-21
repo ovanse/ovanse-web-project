@@ -21,7 +21,6 @@ export const scss = () => {
         }))
       )
     )
-    .pipe(app.plugins.replace(/@img\//g, '../img/'))
     .pipe(sass())
     .pipe(webpCss())
     .pipe(autoPrefixer(app.config.autoPrefixer))

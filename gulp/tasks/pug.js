@@ -12,7 +12,6 @@ export const pug = () => {
       )
     )
     .pipe(gulpPug(app.config.pug))
-    .pipe(app.plugins.replace(/@img\//g, 'img/'))
     .pipe(app.plugins.webpHtmlNoSvg())
     .pipe(app.plugins.versionNumber(app.config.versionNumber))
     .pipe(app.gulp.dest(app.path.build.pug))
