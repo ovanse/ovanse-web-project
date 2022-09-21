@@ -1,6 +1,6 @@
-const isProd = process.argv.includes('--production');
-const isDev = !isProd;
-const usePUG = false; // Использовать PUG или HTML
+const isProd = process.argv.includes('--production')
+const isDev = !isProd
+const usePUG = false // Использовать PUG или HTML
 
 export const config = {
   isProd: isProd,
@@ -46,4 +46,4 @@ export const config = {
     overrideBrowserslist: ['last 3 versions'],
     cascade: true,
   },
-};
+}
