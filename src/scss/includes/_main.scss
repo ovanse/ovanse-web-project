@@ -16,6 +16,10 @@ body {
     margin: 0 auto;
     margin: 10px 0;
     text-align: center;
+    &_footer {
+      margin: 0 auto;
+      width: 10%;
+    }
   }
   #text {
     color: #ff6f61;
