@@ -1,6 +1,6 @@
-const isProd = process.argv.includes('--production')
-const isDev = !isProd
-const usePUG = false // Использовать PUG или HTML
+const isProd = process.argv.includes('--production');
+const isDev = !isProd;
+const usePUG = false; // Использовать PUG или HTML
 
 export const config = {
   isProd: isProd,
@@ -24,6 +24,10 @@ export const config = {
   },
 
   imagemin: {
+    interlaced: true,
+    optimizationLevel: 3, // from 0 to 7
+    progressive: true,
+    svgoPlugins: [{ removeViewBox: false }],
     verbose: true, // выводить размер до и после работы плагина
   },
 
@@ -31,19 +35,19 @@ export const config = {
     formats: ['ttf', 'woff', 'eot', 'svg'],
   },
   versionNumber: {
-    value: '%DT%',
     append: {
-      key: '_v',
       cover: 0,
+      key: '_v',
       to: ['css', 'js'],
     },
     output: {
       file: 'gulp/version.json',
     },
+    value: '%DT%',
   },
   autoPrefixer: {
     grid: true,
     overrideBrowserslist: ['last 3 versions'],
     cascade: true,
   },
-}
+};
