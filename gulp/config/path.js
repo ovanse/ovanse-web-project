@@ -1,9 +1,9 @@
 // Получаем имя папки проекта
-import * as nodePath from 'path';
-const rootFolder = nodePath.basename(nodePath.resolve());
+import * as nodePath from 'path'
+const rootFolder = nodePath.basename(nodePath.resolve())
 
-const buildFolder = './build';
-const srcForlder = './src';
+const buildFolder = './build'
+const srcForlder = './src'
 
 export const path = {
   build: {
@@ -40,4 +40,4 @@ export const path = {
   buildFolder: buildFolder,
   srcForlder: srcForlder,
   ftp: ``,
-};
+}
