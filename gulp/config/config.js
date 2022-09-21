@@ -7,21 +7,19 @@ export const config = {
   isDev: isDev,
   usePUG: usePUG,
 
+  autoPrefixer: {
+    grid: true,
+    overrideBrowserslist: ['last 3 versions'],
+    cascade: true,
+  },
+
+  fonter: {
+    formats: ['ttf', 'woff', 'eot', 'svg'],
+  },
+
   htmlmin: {
     collapseWhitespace: isProd,
     removeComments: isProd,
-  },
-
-  pug: {
-    pretty: isDev, // Сжатие HTML файла
-    verbose: isDev, // Показывать в терминале какой файл обработан
-  },
-
-  webpack: {
-    mode: isProd ? 'production' : 'development', // минифицированный код
-    output: {
-      filename: 'app.min.js',
-    },
   },
 
   imagemin: {
@@ -32,9 +30,11 @@ export const config = {
     verbose: true, // выводить размер до и после работы плагина
   },
 
-  fonter: {
-    formats: ['ttf', 'woff', 'eot', 'svg'],
+  pug: {
+    pretty: isDev, // Сжатие HTML файла
+    verbose: isDev, // Показывать в терминале какой файл обработан
   },
+
   versionNumber: {
     append: {
       cover: 0,
@@ -46,9 +46,11 @@ export const config = {
     },
     value: '%DT%',
   },
-  autoPrefixer: {
-    grid: true,
-    overrideBrowserslist: ['last 3 versions'],
-    cascade: true,
+
+  webpack: {
+    mode: isProd ? 'production' : 'development', // минифицированный код
+    output: {
+      filename: 'app.min.js',
+    },
   },
 };
