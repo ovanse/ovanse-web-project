@@ -22,6 +22,7 @@ import { pug } from './gulp/tasks/pug.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { jsLib } from './gulp/tasks/jsLib.js';
+import { php } from './gulp/tasks/php.js';
 import { img } from './gulp/tasks/img.js';
 import { font } from './gulp/tasks/font.js';
 import { server } from './gulp/tasks/server.js';
@@ -34,13 +35,23 @@ function watcher() {
     : app.gulp.watch(app.path.watch.html, html);
   app.gulp.watch(app.path.watch.scss, scss);
   app.gulp.watch(app.path.watch.js, app.gulp.series(js, jsLib));
+  app.gulp.watch(app.path.watch.php, php);
   app.gulp.watch(app.path.watch.img, img);
   app.gulp.watch(app.path.watch.font, font);
 }
 
 // Формируем список тасков для выполнения
 const markup = app.config.usePUG ? pug : html;
-const mainTasks = app.gulp.parallel(copy, markup, scss, js, jsLib, img, font);
+const mainTasks = app.gulp.parallel(
+  copy,
+  markup,
+  scss,
+  js,
+  jsLib,
+  php,
+  img,
+  font
+);
 // Для Build
 const build = app.gulp.series(clear, mainTasks);
 // Для Dev
