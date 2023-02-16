@@ -21,7 +21,7 @@ export const path = {
     files: [
       `${srcFolder}/files/**/*.*`,
       `${srcFolder}/download/**/*.*`,
-      `${srcFolder}/file.txt`,
+      `${srcFolder}/*`,
     ],
     html: `${srcFolder}/html/*.html`,
     pug: `${srcFolder}/pug/*.pug`,
@@ -37,7 +37,7 @@ export const path = {
     files: [
       `${srcFolder}/files/**/*.*`,
       `${srcFolder}/downloads/**/*.*`,
-      `${srcFolder}/*.*`,
+      `${srcFolder}/*`,
     ],
     html: `${srcFolder}/html/**/*.html`,
     pug: `${srcFolder}/pug/**/*.pug`,
