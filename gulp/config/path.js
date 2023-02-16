@@ -3,7 +3,7 @@ import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = './build';
-const srcForlder = './src';
+const srcFolder = './src';
 
 export const path = {
   build: {
@@ -12,35 +12,41 @@ export const path = {
     pug: `${buildFolder}/`,
     css: `${buildFolder}/css/`,
     js: `${buildFolder}/js/`,
+    jsLib: `${buildFolder}/js/libs/`,
     img: `${buildFolder}/img/`,
     font: `${buildFolder}/fonts/`,
   },
   src: {
     files: [
-      `${srcForlder}/files/**/*.*`,
-      `${srcForlder}/download/**/*.*`,
-      `${srcForlder}/file.txt`,
+      `${srcFolder}/files/**/*.*`,
+      `${srcFolder}/download/**/*.*`,
+      `${srcFolder}/file.txt`,
     ],
-    html: `${srcForlder}/html/*.html`,
-    pug: `${srcForlder}/pug/*.pug`,
-    scss: `${srcForlder}/scss/style.scss`,
-    js: `${srcForlder}/js/app.js`,
-    img: `${srcForlder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-    svg: `${srcForlder}/img/**/*.svg`,
-    font: `${srcForlder}/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
+    html: `${srcFolder}/html/*.html`,
+    pug: `${srcFolder}/pug/*.pug`,
+    scss: `${srcFolder}/scss/style.scss`,
+    js: `${srcFolder}/js/app.js`,
+    jsLib: `${srcFolder}/js/libs/*.js`,
+    img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${srcFolder}/img/**/*.svg`,
+    font: `${srcFolder}/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
   },
   watch: {
-    files: [`${srcForlder}/files/**/*.*`, `${srcForlder}/downloads/**/*.*`],
-    html: `${srcForlder}/html/**/*.html`,
-    pug: `${srcForlder}/pug/**/*.pug`,
-    scss: `${srcForlder}/scss/**/*.scss`,
-    js: `${srcForlder}/js/**/*.js`,
-    img: `${srcForlder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
-    svg: `${srcForlder}/img/**/*.svg`,
-    font: `${srcForlder}/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
+    files: [
+      `${srcFolder}/files/**/*.*`,
+      `${srcFolder}/downloads/**/*.*`,
+      `${srcFolder}/*.*`,
+    ],
+    html: `${srcFolder}/html/**/*.html`,
+    pug: `${srcFolder}/pug/**/*.pug`,
+    scss: `${srcFolder}/scss/**/*.scss`,
+    js: `${srcFolder}/js/**/*.js`,
+    img: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+    svg: `${srcFolder}/img/**/*.svg`,
+    font: `${srcFolder}/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
   },
   clean: buildFolder,
   buildFolder: buildFolder,
-  srcForlder: srcForlder,
+  srcFolder: srcFolder,
   ftp: ``,
 };
