@@ -48,6 +48,7 @@
     "gulp-webp-css": "^1.1.0",
     "gulp-webp-html-nosvg": "^1.1.1",
     "sass": "^1.54.9",
+    "webpack": "^5.76.2",
     "webpack-stream": "^7.0.0"
   },
   "browserslist": [
