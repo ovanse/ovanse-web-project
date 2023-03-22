@@ -1,0 +1,19 @@
+// Breakpoints
+$bp-xxs: '320px';
+$bp-xs: 480px;
+$bp-s: 768px;
+$bp-m: 1024px;
+$bp-l: 1366px;
+$bp-xl: 1920px;
+$bp-xxl: 2560px;
+$bp-xxxl: 3840px;
+
+// Media Queries
+$mq-xxs: '(min-width: #{$bp-xxs})';
+$mq-xs: '(min-width: #{$bp-xs})';
+$mq-s: '(min-width: #{$bp-s})';
+$mq-m: '(min-width: #{$bp-m})';
+$mq-l: '(min-width: #{$bp-l})';
+$mq-xl: '(min-width: #{$bp-xl})';
+$mq-xxl: '(min-width: #{$bp-xxl}';
+$mq-xxxl: '(min-width: #{$bp-xxxl})';
