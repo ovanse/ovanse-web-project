@@ -1,103 +1,103 @@
-@media #{$mq-xxs} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-xxs} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-xs} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-xs} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-s} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-s} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-m} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-m} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-l} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-l} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-xl} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-xl} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-xxl} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-xxl} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }
 
-@media #{$mq-xxxl} {
-    div,
-    main,
-    nav,
-    section,
-    article,
-    header,
-    footer,
-    aside {
-        display: none;
-    }
+@media #{$mediaQuery-xxxl} {
+  div,
+  main,
+  nav,
+  section,
+  article,
+  header,
+  footer,
+  aside {
+    display: block;
+  }
 }

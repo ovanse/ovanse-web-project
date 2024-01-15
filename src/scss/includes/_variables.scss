@@ -1,19 +1,19 @@
 // Breakpoints
-$bp-xxs: '320px';
-$bp-xs: 480px;
-$bp-s: 768px;
-$bp-m: 1024px;
-$bp-l: 1366px;
-$bp-xl: 1920px;
-$bp-xxl: 2560px;
-$bp-xxxl: 3840px;
+$breakPoint-xxs: 320px;
+$breakPoint-xs: 480px;
+$breakPoint-s: 768px;
+$breakPoint-m: 1024px;
+$breakPoint-l: 1366px;
+$breakPoint-xl: 1920px;
+$breakPoint-xxl: 2560px;
+$breakPoint-xxxl: 3840px;
 
 // Media Queries
-$mq-xxs: '(min-width: #{$bp-xxs})';
-$mq-xs: '(min-width: #{$bp-xs})';
-$mq-s: '(min-width: #{$bp-s})';
-$mq-m: '(min-width: #{$bp-m})';
-$mq-l: '(min-width: #{$bp-l})';
-$mq-xl: '(min-width: #{$bp-xl})';
-$mq-xxl: '(min-width: #{$bp-xxl})';
-$mq-xxxl: '(min-width: #{$bp-xxxl})';
+$mediaQuery-xxs: '(min-width: #{$breakPoint-xxs})';
+$mediaQuery-xs: '(min-width: #{$breakPoint-xs})';
+$mediaQuery-s: '(min-width: #{$breakPoint-s})';
+$mediaQuery-m: '(min-width: #{$breakPoint-m})';
+$mediaQuery-l: '(min-width: #{$breakPoint-l})';
+$mediaQuery-xl: '(min-width: #{$breakPoint-xl})';
+$mediaQuery-xxl: '(min-width: #{$breakPoint-xxl})';
+$mediaQuery-xxxl: '(min-width: #{$breakPoint-xxxl})';
