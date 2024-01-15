@@ -1,3 +1,3 @@
-export function mySum(a, b) {
+export const mySum = (a, b) => {
   return a + b;
-}
+};
