@@ -1,6 +1,6 @@
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
-const usePUG = true; // Использовать PUG или HTML
+const usePUG = false; // Использовать PUG или HTML
 
 export const config = {
   isProd: isProd,
