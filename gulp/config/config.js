@@ -1,11 +1,9 @@
 const isProd = process.argv.includes('--production');
 const isDev = !isProd;
-const usePUG = false; // Использовать PUG или HTML
 
 export const config = {
   isProd: isProd,
   isDev: isDev,
-  usePUG: usePUG,
 
   autoPrefixer: {
     grid: true,
@@ -28,11 +26,6 @@ export const config = {
     progressive: true,
     svgoPlugins: [{ removeViewBox: false }],
     verbose: true, // выводить размер до и после работы плагина
-  },
-
-  pug: {
-    pretty: isDev, // Сжатие HTML файла
-    verbose: isDev, // Показывать в терминале какой файл обработан
   },
 
   versionNumber: {

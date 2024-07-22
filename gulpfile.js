@@ -18,7 +18,6 @@ global.app = {
 import { clear } from './gulp/tasks/clear.js';
 import { copy } from './gulp/tasks/copy.js';
 import { html } from './gulp/tasks/html.js';
-import { pug } from './gulp/tasks/pug.js';
 import { scss } from './gulp/tasks/scss.js';
 import { js } from './gulp/tasks/js.js';
 import { jsLib } from './gulp/tasks/jsLib.js';
@@ -30,9 +29,7 @@ import { server } from './gulp/tasks/server.js';
 // Наблюдатель за изменениями в файлах
 function watcher() {
   app.gulp.watch(app.path.watch.files, copy);
-  app.config.usePUG
-    ? app.gulp.watch(app.path.watch.pug, pug)
-    : app.gulp.watch(app.path.watch.html, html);
+  app.gulp.watch(app.path.watch.html, html);
   app.gulp.watch(app.path.watch.scss, scss);
   app.gulp.watch(app.path.watch.js, app.gulp.series(js, jsLib));
   app.gulp.watch(app.path.watch.php, php);
@@ -41,17 +38,7 @@ function watcher() {
 }
 
 // Формируем список тасков для выполнения
-const markup = app.config.usePUG ? pug : html;
-const mainTasks = app.gulp.parallel(
-  copy,
-  markup,
-  scss,
-  js,
-  jsLib,
-  php,
-  img,
-  font
-);
+const mainTasks = app.gulp.parallel(copy, html, scss, js, jsLib, php, img, font);
 // Для Build
 const build = app.gulp.series(clear, mainTasks);
 // Для Dev
