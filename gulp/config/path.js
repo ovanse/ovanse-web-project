@@ -9,6 +9,7 @@ export const path = {
   build: {
     files: `${buildFolder}/`,
     html: `${buildFolder}/`,
+    pug: `${buildFolder}/`,
     css: `${buildFolder}/css/`,
     js: `${buildFolder}/js/`,
     jsLib: `${buildFolder}/js/libs/`,
@@ -23,8 +24,10 @@ export const path = {
       `${srcFolder}/*`,
       `!${srcFolder}/scss`,
       `!${srcFolder}/html`,
+      `!${srcFolder}/pug`,
     ],
     html: `${srcFolder}/html/*.html`,
+    pug: `${srcFolder}/pug/*.pug`,
     scss: `${srcFolder}/scss/style.scss`,
     js: `${srcFolder}/js/app.js`,
     jsLib: `${srcFolder}/js/libs/*.js`,
@@ -36,6 +39,7 @@ export const path = {
   watch: {
     files: [`${srcFolder}/files/**/*.*`, `${srcFolder}/downloads/**/*.*`, `${srcFolder}/*`],
     html: `${srcFolder}/html/**/*.html`,
+    pug: `${srcFolder}/pug/**/*.pug`,
     scss: `${srcFolder}/scss/**/*.scss`,
     js: `${srcFolder}/js/**/*.js`,
     php: `${srcFolder}/php/**/*`,

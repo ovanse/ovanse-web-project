@@ -38,7 +38,8 @@ function watcher() {
 }
 
 // Формируем список тасков для выполнения
-const mainTasks = app.gulp.parallel(copy, html, scss, js, jsLib, php, img, font);
+const markup = app.config.usePUG ? pug : html;
+const mainTasks = app.gulp.parallel(copy, markup, scss, js, jsLib, php, img, font);
 // Для Build
 const build = app.gulp.series(clear, mainTasks);
 // Для Dev
