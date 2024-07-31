@@ -1,4 +1,3 @@
-import fonter from 'gulp-fonter';
 import ttf2woff2 from 'gulp-ttf2woff2';
 
 export const font = () => {
@@ -13,7 +12,6 @@ export const font = () => {
       )
     )
     .pipe(app.plugins.newer(app.path.build.font))
-    .pipe(fonter(app.config.fonter))
     .pipe(app.gulp.dest(app.path.build.font))
     .pipe(ttf2woff2())
     .pipe(app.gulp.dest(app.path.build.font))

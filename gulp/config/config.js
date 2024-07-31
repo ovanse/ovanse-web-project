@@ -13,10 +13,6 @@ export const config = {
     cascade: true,
   },
 
-  fonter: {
-    formats: ['ttf', 'woff', 'eot', 'svg'],
-  },
-
   htmlmin: {
     collapseWhitespace: isProd,
     removeComments: isProd,
